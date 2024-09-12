@@ -1,0 +1,103 @@
+/* Đặt căn chỉnh chung cho toàn ứng dụng */
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Phần chính của máy tính */
+.calculator {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Phần màn hình hiển thị */
+.display {
+  background-color: #444;
+  color: #fff;
+  padding: 20px;
+  text-align: right;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+/* Tạo grid cho các nút */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+}
+
+/* Căn chỉnh cho các nút chung */
+button {
+  padding: 20px;
+  font-size: 1.5em;
+  background-color: #333;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hiệu ứng khi hover chuột lên nút */
+button:hover {
+  background-color: #555;
+}
+
+/* Màu sắc riêng cho các nút chức năng (AC, C) */
+button.clear,
+button.backspace {
+  background-color: #ff5e5e;
+}
+
+button.clear:hover,
+button.backspace:hover {
+  background-color: #ff3232;
+}
+
+/* Màu sắc riêng cho các phép toán */
+button.operator {
+  background-color: #f39c12;
+}
+
+button.operator:hover {
+  background-color: #e67e22;
+}
+
+/* Màu cho nút "=" */
+button.equal {
+  background-color: #27ae60;
+  grid-column: span 2;
+}
+
+button.equal:hover {
+  background-color: #2ecc71;
+}
+
+/* Nút số 0 rộng gấp đôi */
+button.zero {
+  grid-column: span 2;
+}
+
+/* Đặt responsive để hiển thị đẹp trên các màn hình nhỏ hơn */
+@media (max-width: 600px) {
+  .calculator {
+    padding: 10px;
+    font-size: 1.2em;
+  }
+
+  button {
+    padding: 15px;
+    font-size: 1.2em;
+  }
+}
